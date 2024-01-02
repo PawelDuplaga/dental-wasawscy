@@ -1,0 +1,22 @@
+@import '/src/styles/abstracts/mixins';
+@import '/src/styles/abstracts/variables';
+@import '/src/styles/type-scale';
+
+
+.buttonSquareContainer {
+    font-family: inherit;
+    padding: 16px 30px;
+    display: flex;
+    width: max-content;
+    justify-content: center;
+    align-items: center;
+    background-color: #283636;
+    color:#FAFAFA;
+    border: none;
+    font-weight: 400;
+    gap:12px;
+    font-size: 22px;
+    letter-spacing: -0.22px;
+
+    @include fluid-type(400px,3000px,16px, 28px);
+}

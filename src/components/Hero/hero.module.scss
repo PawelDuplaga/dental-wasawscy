@@ -1,9 +1,16 @@
 @import '/src/styles/grid';
 @import '/src/styles/abstracts/variables';
+@import '/src/styles/type-scale';
+
+
 
 
 .heroTitle {
+    padding-top: 6%;
     position: absolute;
+    display: flex;
+    flex-direction: column;
+    transform: translateX(8vw);
 }
 
 .textC1 {
@@ -15,6 +22,9 @@
     & .bigNumber {
         line-height: 0.75;
         font-size: 192px;
+        color: $grey-primary;
+        
+        @include fluid-type(400px,3000px, 60px, 260px)
     }
 }
 
@@ -25,27 +35,81 @@
     gap: 4px;
     display: flex;
     flex-direction: column;
+
+    @include fluid-type(400px,3000px, 24px, 108px)
 }
 
+.textC3 {
+    font-weight: 400;
+    font-size: 78px;
+    line-height: 1.1;
+    display: flex;
+    gap: 3vw;
+    transform: translateX(40%);
+
+    @include fluid-type(400px,3000px, 24px, 108px)
+}
+
+.textC4 {
+    font-weight: 400;
+    font-size: 78px;
+    line-height: 1;
+    transform: translateX(50px);
+    color: $grey-primary;
+
+    @include fluid-type(400px,3000px, 24px, 108px)
+}
 
 .heroContainer {
+    padding-top: 2%;
     display: flex;
-    height: 500px;
+    flex-direction: column;
+    height: auto;
     width: 100%;
-    background-color: rgb(209, 199, 187);
+    // background-color: rgb(209, 199, 187);
 
     & .innerContainer {
         width: 100%;
+        height: auto;
         @include page-grid;
 
-        & .img1 {
+        & .img1C {
             display: flex;
             justify-content: flex-end;
             grid-column: 3/4;
+
+            & .img1 {
+                height: 22vw;
+                width: auto;
+            }
+
         }
 
-        & .img2 {
+        & .img2C {
             grid-column: 4/5;
+
+            
+            & .img2 {
+                height: 28.5vw;
+                width: auto;
+            }
         }
+    }
+}
+
+
+.buttonSection {
+    width: 100%;
+    padding-top: 3%;
+    @include page-grid;
+
+    .button1C {
+        display: flex;
+        justify-content: flex-end;
+        grid-column: 2/3;
+    }
+
+    .button2C {
+        grid-column: 3/4;
     }
 }
